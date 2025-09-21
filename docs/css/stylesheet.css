@@ -65,4 +65,12 @@ footer {
   width: 100%;
   bottom: 0;
 }
+
+/* Circular Sponsor Banner */
+.sponsor-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
 /* ################################################# END Custom Styles ################################################# */
