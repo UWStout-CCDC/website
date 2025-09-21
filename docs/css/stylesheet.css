@@ -44,3 +44,25 @@ a:hover {
 }
 
 /* ################################################# END Global Styles ################################################# */
+
+/* ################################################# Custom Styles ################################################# */
+
+/* Header styles */
+header {
+  background: var(--secondary-color);
+  color: var(--text-color);
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Footer styles */
+footer {
+  background: var(--secondary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+/* ################################################# END Custom Styles ################################################# */
