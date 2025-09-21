@@ -1,0 +1,46 @@
+/* ################################################# CSS Variables for Theming ################################################# */
+/* Initialize roor color scheme */
+:root {
+  --primary-color: #1B74C3; /* primary blue */
+  --secondary-color: #011C37; /* secondary dark blue */
+  --text-color: #ffffff; /* light text color */
+  --background-color: #E6E6E6; /* light background color */
+  --accent-color: #1D1D1D; /* Carcoal Grey */
+}
+
+/* Dark theme */
+html[data-theme='dark'] {
+  --primary-color: #1B74C3;
+  --secondary-color: #011C37;
+  --text-color: #ffffff;
+  --background-color: #1D1D1D;
+  --accent-color: #E6E6E6;
+}
+/* ################################################# END CSS Variables for Theming ################################################# */
+
+/* ################################################# Global Styles ################################################# */
+
+/* Base styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ################################################# END Global Styles ################################################# */
