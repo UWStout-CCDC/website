@@ -49,10 +49,33 @@ a:hover {
 
 /* Header styles */
 header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
   background: var(--secondary-color);
   color: var(--text-color);
   padding: 10px 0;
   text-align: center;
+  height: auto;
+  display: flex;
+  margin: 0 auto;
+}
+
+.banner_padding {
+  padding: 3px 0;
+  text-align: left;
+}
+
+.discord_padding {
+  padding: 3px 0;
+  text-align: right;
+}
+
+.banner_logo {
+  width: auto;
+  max-height: 40px;
+  margin: 0 auto;
 }
 
 /* Footer styles */
