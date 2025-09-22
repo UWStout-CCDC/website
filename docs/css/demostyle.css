@@ -1,0 +1,63 @@
+/* Base theme variables */
+:root {
+  --color-bg: #E5E5E5;       /* Light background */
+  --color-bg-secondary: #FFFFFF;
+  --color-text: #1C1C1C;      /* Primary text */
+  --color-text-secondary: #333333;
+  --color-accent: #1976D2;    /* Cyber blue */
+  --color-accent-secondary: #00B8D9; /* Optional cyan accent */
+  --color-nav-bg: var(--color-accent);
+}
+
+/* Automatically apply dark mode if user's OS prefers it */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #040f18;       
+    --color-bg-secondary: #001B36;
+    --color-text: #E5E5E5;
+    --color-text-secondary: #CCCCCC;
+    --color-accent: #1976D2;
+    --color-accent-secondary: #00B8D9;
+    --color-nav-bg: #07141f;
+  }
+}
+
+/* Dark theme override */
+[data-theme="dark"] {
+  --color-bg: #040f18;       
+  --color-bg-secondary: #001B36;
+  --color-text: #E5E5E5;
+  --color-text-secondary: #CCCCCC;
+  --color-accent: #1976D2;
+  --color-accent-secondary: #00B8D9;
+  --color-nav-bg: #07141f;
+}
+
+[data-theme="light"] {
+  --color-bg: #E5E5E5;       /* Light background */
+  --color-bg-secondary: #FFFFFF;
+  --color-text: #1C1C1C;      /* Primary text */
+  --color-text-secondary: #333333;
+  --color-accent: #1976D2;    /* Cyber blue */
+  --color-accent-secondary: #00B8D9; /* Optional cyan accent */
+  --color-nav-bg: var(--color-accent);
+}
+
+body {
+  background-color: var(--color-bg) !important;
+  color: var(--color-text) !important;
+  transition: background-color 0.3s ease, color 0.3s ease !important;
+}
+
+button {
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
