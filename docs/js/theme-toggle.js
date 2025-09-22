@@ -1,18 +1,60 @@
-const themeToggle = document.getElementById('theme-toggle');
-const htmlElement = document.documentElement;
 
-// Load saved theme preference
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
-    htmlElement.setAttribute('data-theme', savedTheme);
-} else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    // Detect system preference if no saved theme
-    htmlElement.setAttribute('data-theme', 'dark');
+        const storageKey = 'theme-preference'
+
+const onClick = () => {
+  // flip current value
+  theme.value = theme.value === 'light'
+    ? 'dark'
+    : 'light'
+
+  setPreference()
 }
 
-themeToggle.addEventListener('click', () => {
-    const currentTheme = htmlElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    htmlElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme); // Save preference
-});
+const getColorPreference = () => {
+  if (localStorage.getItem(storageKey))
+    return localStorage.getItem(storageKey)
+  else
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light'
+}
+
+const setPreference = () => {
+  localStorage.setItem(storageKey, theme.value)
+  reflectPreference()
+}
+
+const reflectPreference = () => {
+  document.firstElementChild
+    .setAttribute('data-theme', theme.value)
+
+  document
+    .querySelector('#theme-toggle')
+    ?.setAttribute('aria-label', theme.value)
+}
+
+const theme = {
+  value: getColorPreference(),
+}
+
+// set early so no page flashes / CSS is made aware
+reflectPreference()
+
+window.onload = () => {
+  // set on load so screen readers can see latest value on the button
+  reflectPreference()
+
+  // now this script can find and listen for clicks on the control
+  document
+    .querySelector('#theme-toggle')
+    .addEventListener('click', onClick)
+}
+
+// sync with system changes
+window
+  .matchMedia('(prefers-color-scheme: dark)')
+  .addEventListener('change', ({matches:isDark}) => {
+    theme.value = isDark ? 'dark' : 'light'
+    setPreference()
+  })
+        
