@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/demostyle.css">
+    <link rel="stylesheet" href="css/mainstyle.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
     <title>Document</title>
@@ -28,7 +28,7 @@
         <div
             style="display: flex; align-items: center; margin-right: 2rem; position: absolute; left: 1.5rem; top: 0; bottom: 0; height: 100%;">
             <a href="/" style="display: flex; align-items: center; text-decoration: none; color: #fff;">
-                <img id="logo-img" src="/docs/branding/cyberstout_banner_3.png" alt="Logo"
+                <img id="logo-img" src="branding/cyberstout_banner_3.png" alt="Logo"
                     style="height: 2rem; margin-right: 0.5rem;">
             </a>
         </div>
@@ -81,9 +81,9 @@
             const theme = document.documentElement.getAttribute('data-theme');
             const logo = document.getElementById('logo-img');
             if (theme === 'dark') {
-                logo.src = '/docs/branding/cyberstout_banner_2.png';
+                logo.src = 'branding/cyberstout_banner_2.png';
             } else {
-                logo.src = '/docs/branding/cyberstout_banner_3.png';
+                logo.src = 'branding/cyberstout_banner_3.png';
             }
         }
         updateLogo();
@@ -103,7 +103,7 @@
             <canvas id="shootingStars"></canvas>
             <div class="hero">
                 <h1 class="mb-0 py-4 hero-title">Cyber@Stout</h1>
-                <img id="logo-img" class="hero-logo" src="/docs/branding/cyberstout_logo.png" alt="Cyber@Stout Logo" />
+                <img id="logo-img" class="hero-logo" src="branding/cyberstout_logo.png" alt="Cyber@Stout Logo" />
                 <h2 class="mt-2">We are UW-Stout's Premier Cybersecurity Club.</h2>
                 <p class="mt-2">Join us in our mission to promote cybersecurity awareness and education.</p>
                 <a href="/about" class="btn btn-primary mt-3">Learn More</a>
@@ -114,8 +114,29 @@
         // Configurable parameters
         const STAR_COUNT = 6;
         const TRAIL_LENGTH = 80; // More spread out trail
-        const STAR_COLOR = 'rgba(0, 200, 255, 1)';
-        const TRAIL_COLOR = 'rgba(0, 200, 255, 0.6)';
+        // Set star and trail colors based on theme
+        function getStarColors() {
+            const theme = document.documentElement.getAttribute('data-theme') || 'light';
+            if (theme === 'dark') {
+                return {
+                    STAR_COLOR: 'rgba(0, 200, 255, 1)',
+                    TRAIL_COLOR: 'rgba(0, 200, 255, 0.6)'
+                };
+            } else {
+                return {
+                    STAR_COLOR: 'rgba(0, 120, 200, 1)',
+                    TRAIL_COLOR: 'rgba(0, 120, 200, 0.5)'
+                };
+            }
+        }
+        let { STAR_COLOR, TRAIL_COLOR } = getStarColors();
+
+        // Update colors on theme change
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+            setTimeout(() => {
+                ({ STAR_COLOR, TRAIL_COLOR } = getStarColors());
+            }, 0);
+        });
         const STAR_RADIUS = 2;
         const STAR_MIN_SPEED = 1; // Slower min speed
         const STAR_MAX_SPEED = 10; // Slower max speed
@@ -217,32 +238,41 @@
 </body>
 
 <footer>
-    <h3><b>Stay Connected</b></h3>
-    <p style="width: 50%; margin: 0 auto; margin-top: 2rem;">You can follow us on social media to stay informed about
-        upcoming events or
-        opportunities.
-        Make sure to join our
-        Discord whether you are a Stout student or not!</p>
-    <div style="margin-bottom: 1rem; margin-top: 2rem;">
-        <a href="https://twitter.com/cyberstout" target="_blank" class="btn btn-outline-light mx-1"
-            style="display: inline-flex; align-items: center;">
-            <i class="bi bi-twitter" style="font-size: 1.2rem; margin-right: 0.5rem;"></i>Twitter
-        </a>
-        <a href="https://github.com/cyberstout" target="_blank" class="btn btn-outline-light mx-1"
-            style="display: inline-flex; align-items: center;">
-            <i class="bi bi-github" style="font-size: 1.2rem; margin-right: 0.5rem;"></i>GitHub
-        </a>
+    <div class="text-center pt-4 ">
+        <h3><b>Stay Connected</b></h3>
+        <p class="col-sm-8 col-lg-6" style="width: 50%; margin: 0 auto; margin-top: 2rem;">You can follow us on social
+            media
+            to stay
+            informed about
+            upcoming events or
+            opportunities.
+            Make sure to join our
+            Discord whether you are a Stout student or not!</p>
+        <div style="margin-bottom: 1rem; margin-top: 2rem;">
+            <a href="https://www.linkedin.com/company/cyberstout/" target="_blank" class="btn btn-outline-light mx-1"
+                style="display: inline-flex; align-items: center;">
+                <i class="bi bi-linkedin" style="font-size: 1.2rem;"></i>
+            </a>
+            <a href="https://github.com/UWStout-CCDC" target="_blank" class="btn btn-outline-light mx-1"
+                style="display: inline-flex; align-items: center;">
+                <i class="bi bi-github" style="font-size: 1.2rem;"></i>
+            </a>
+            <a href="https://discord.gg/WnM73rQFCY" target="_blank" class="btn btn-outline-light mx-1"
+                style="display: inline-flex; align-items: center;">
+                <i class="bi bi-discord" style="font-size: 1.2rem;"></i>
+            </a>
+        </div>
+        <p style="margin-bottom: 0.5rem; color: var(--color-text-primary);">&copy;
+            <script>document.write(new Date().getFullYear())</script> Cyber@Stout. All rights reserved.
+        </p>
+        <p style="margin: 0; margin-bottom: 0; font-size: 0.9rem;">Made with <i class="bi bi-heart"
+                style="color: var(--color-text-primary);"></i>
+            by <a href="https://github.com/NotEnoughAuth" target="_blank"
+                style="color: var(--color-text-primary);">NotEnoughAuth</a> &amp;
+            <a href="https://github.com/doshowipospf" target="_blank"
+                style="color: var(--color-text-primary);">doshowipospf</a>
+        </p>
     </div>
-    <p style="margin-bottom: 0.5rem; color: var(--color-text-primary);">&copy;
-        <script>document.write(new Date().getFullYear())</script> Cyber@Stout. All rights reserved.
-    </p>
-    <p style="margin: 0; margin-bottom: 0; font-size: 0.9rem;">Made with <i class="bi bi-heart"
-            style="color: var(--color-text-primary);"></i>
-        by <a href="https://github.com/NotEnoughAuth" target="_blank"
-            style="color: var(--color-text-primary);">NotEnoughAuth</a> &amp;
-        <a href="https://github.com/doshowipospf" target="_blank"
-            style="color: var(--color-text-primary);">doshowipospf</a>
-    </p>
 </footer>
 
 </html>
