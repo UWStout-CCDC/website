@@ -35,19 +35,27 @@
         <ul style="display: flex; justify-content: center; margin: 0; padding: 0; list-style: none; width: 100%;">
             <li style="display: flex; align-items: center; margin: 0 1rem; height: 100%;">
                 <a href="/"
-                    style="color: #fff; text-decoration: none; display: flex; align-items: center; height: 100%;">Home</a>
+                    style="color: #fff; text-decoration: none; display: flex; align-items: center; height: 100%;">About Us</a>
             </li>
             <li style="display: flex; align-items: center; margin: 0 1rem; height: 100%;">
                 <a href="/about"
-                    style="color: #fff; text-decoration: none; display: flex; align-items: center; height: 100%;">About</a>
+                    style="color: #fff; text-decoration: none; display: flex; align-items: center; height: 100%;">Sponsorship</a>
             </li>
             <li style="display: flex; align-items: center; margin: 0 1rem; height: 100%;">
-                <a href="/contact"
-                    style="color: #fff; text-decoration: none; display: flex; align-items: center; height: 100%;">Contact</a>
+                <a href="/sponsorship"
+                    style="color: #fff; text-decoration: none; display: flex; align-items: center; height: 100%;">Competition</a>
             </li>
             <li style="display: flex; align-items: center; margin: 0 1rem; height: 100%;">
-                <a href="/gallery"
-                    style="color: #fff; text-decoration: none; display: flex; align-items: center; height: 100%;">Gallery</a>
+                <a href="/competition"
+                    style="color: #fff; text-decoration: none; display: flex; align-items: center; height: 100%;">Calendar</a>
+            </li>
+            <li style="display: flex; align-items: center; margin: 0 1rem; height: 100%;">
+                <a href="/calendar"
+                    style="color: #fff; text-decoration: none; display: flex; align-items: center; height: 100%;">Writeups</a>
+            </li>
+            <li style="display: flex; align-items: center; margin: 0 1rem; height: 100%;">
+                <a href="/ctf"
+                    style="color: #fff; text-decoration: none; display: flex; align-items: center; height: 100%;">CTFs</a>
             </li>
         </ul>
         <button id="theme-toggle"
@@ -119,12 +127,14 @@
             const theme = document.documentElement.getAttribute('data-theme') || 'light';
             if (theme === 'dark') {
                 return {
-                    STAR_COLOR: 'rgba(0, 200, 255, 1)',
+                    //STAR_COLOR: 'rgba(0, 200, 255, 1)',
+                    STAR_COLOR: 'rgba(0, 200, 255, 0)',
                     TRAIL_COLOR: 'rgba(0, 200, 255, 0.6)'
                 };
             } else {
                 return {
-                    STAR_COLOR: 'rgba(0, 120, 200, 1)',
+                    //STAR_COLOR: 'rgba(0, 120, 200, 1)',
+                    STAR_COLOR: 'rgba(0, 120, 200, 0)',
                     TRAIL_COLOR: 'rgba(0, 120, 200, 0.5)'
                 };
             }
@@ -192,7 +202,8 @@
             draw() {
                 // Draw trail digits
                 this.trail.forEach((t, i) => {
-                    ctx.globalAlpha = t.opacity * (1 - i / this.trail.length);
+                    //ctx.globalAlpha = t.opacity * (1 - i / this.trail.length);
+                    ctx.globalAlpha = t.opacity * (i / this.trail.length);
                     ctx.fillStyle = TRAIL_COLOR;
                     ctx.font = STAR_FONT;
                     ctx.fillText(t.digit, t.x, t.y);
