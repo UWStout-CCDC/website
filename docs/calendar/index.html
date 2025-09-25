@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url" content="https://cyberatstout.org/index.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Cyber@Stout - Stout Collegiate Cyber Defense Club" />
+    <meta property="og:description"
+        content="The University of Wisconsin Stout's Premier Collegiate Cyber Defense Club - Learn cybersecurity fundamentals, compete in national competitions, network with industry professionals, and join our thriving community of security enthusiasts and researchers." />
+    <meta property="og:image" content="https://cyberatstout.org/assets/ccdl_banner_white.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@CyberStout" />
+    <meta name="twitter:creator" content="@CyberStout" />
+    <meta name="twitter:title" content="Cyber@Stout - Stout's Collegiate Cyber Defense Club" />
+    <meta name="twitter:description"
+        content="The University of Wisconsin Stout's Premier Collegiate Cyber Defense Club - Learn cybersecurity fundamentals, compete in national competitions, network with industry professionals, and join our thriving community of security enthusiasts and researchers." />
+    <meta name="twitter:image" content="https://cyberatstout.org/assets/ccdl_banner_white.png" />
+    <link rel="canonical" href="https://cyberatstout.org/index.html" />
+    <meta name="description"
+        content="Support the Cyber@Stout Collegiate Cyber Defense Competition Club by becoming a sponsor. Help fund our students and our mission to educate the community about computer security." />
+    <title>Calendar | Cyber@Stout</title>
+    <link rel="icon" type="image/x-icon" href="../branding/favicon_all/favicon.ico" sizes="32x32">
+    <link rel="shortcut icon" href="../branding/favicon_all/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../branding/favicon_all/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../branding/favicon_all/apple-touch-icon.png"><!-- 180×180 -->
+    <link rel="manifest" href="../branding/favicon_all/site.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../css/mainstyle.css">
+    <script>
+        function toggleNavbar() {
+            const navbar = document.querySelector(".navbar-collapse");
+            const navbarFull = document.getElementById("navbar");
+            if (navbar.classList.contains("show")) {
+                navbar.classList.remove("show");
+                if (window.scrollY == 0) {
+                    navbarFull.classList.remove("scrolled");
+                }
+            } else {
+                navbar.classList.add("show");
+                navbarFull.classList.add("scrolled");
+            }
+        }
+    </script>
+</head>
+
+<header>
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top justify-content-center">
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="navbar-item">
+                    <a href="../about" class="nav-link">About Us</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="../sponsorship" class="nav-link">Sponsorship</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="../competition" class="nav-link">Competition</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="./" class="nav-link">Calendar</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="../writeups" class="nav-link">Writeups</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="../ctf" class="nav-link">CTFs</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-brand">
+            <a href="../">
+                <img id="logo" src="../branding/cyberstout_banner_3.png" alt="Logo">
+            </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleNavbar()">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <button id="theme-toggle"
+            style="position: absolute; right: 1.5rem; background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; top: 0; bottom: 0; height: 100%;">
+            <i class="bi bi-moon"></i>
+        </button>
+    </nav>
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        const root = document.documentElement;
+
+        // Set the initial theme icon based on the current theme
+        const currentTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        toggle.innerHTML = currentTheme === 'dark' ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon"></i>';
+
+        if (root.getAttribute('data-theme') === null) {
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            root.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+        }
+
+        toggle.addEventListener('click', () => {
+            const currentTheme = root.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            root.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            toggle.innerHTML = newTheme === 'dark' ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon"></i>';
+        });
+    </script>
+    <script>
+        function updateLogo() {
+            const theme = document.documentElement.getAttribute('data-theme');
+            const logo = document.getElementById('logo');
+            if (theme === 'dark') {
+                logo.src = '../branding/cyberstout_banner_2.png';
+            } else {
+                logo.src = '../branding/cyberstout_banner_3.png';
+            }
+        }
+        updateLogo();
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+            setTimeout(updateLogo, 0);
+        });
+    </script>
+</header>
+
+
+<body>
+    <div class="calendar-container">
+        <div class="textpost" id="textpost">
+        <h1 id="calendar">Calendar</h1>
+        <hr>
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FChicago&showPrint=0&src=c3RvdXRjeWJlckBnbWFpbC5jb20&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%230B8043" style="border:solid 1px #777" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <div class="text-center pt-4 ">
+        <h3><b>Stay Connected</b></h3>
+        <p class="col-sm-8 col-lg-6" style="width: 50%; margin: 0 auto; margin-top: 2rem;">You can follow us on social
+            media
+            to stay
+            informed about
+            upcoming events or
+            opportunities.
+            Make sure to join our
+            Discord whether you are a Stout student or not!</p>
+        <div style="margin-bottom: 1rem; margin-top: 2rem;">
+            <a href="https://www.linkedin.com/company/cyberstout/" target="_blank" class="btn btn-outline-light mx-1"
+                style="display: inline-flex; align-items: center;">
+                <i class="bi bi-linkedin" style="font-size: 1.2rem;"></i>
+            </a>
+            <a href="https://github.com/UWStout-CCDC" target="_blank" class="btn btn-outline-light mx-1"
+                style="display: inline-flex; align-items: center;">
+                <i class="bi bi-github" style="font-size: 1.2rem;"></i>
+            </a>
+            <a href="https://discord.gg/WnM73rQFCY" target="_blank" class="btn btn-outline-light mx-1"
+                style="display: inline-flex; align-items: center;">
+                <i class="bi bi-discord" style="font-size: 1.2rem;"></i>
+            </a>
+        </div>
+        <p style="margin-bottom: 0.5rem; color: var(--color-text-primary);">&copy;
+            <script>document.write(new Date().getFullYear())</script> Cyber@Stout. All rights reserved.
+        </p>
+        <p style="margin: 0; margin-bottom: 0; font-size: 0.9rem;">Made with <i class="bi bi-heart"
+                style="color: var(--color-text-primary);"></i>
+            by <a href="https://github.com/NotEnoughAuth" target="_blank"
+                style="color: var(--color-text-primary);">NotEnoughAuth</a> &amp;
+            <a href="https://github.com/doshowipospf" target="_blank"
+                style="color: var(--color-text-primary);">doshowipospf</a>
+        </p>
+    </div>
+</footer>
+
+</html>
