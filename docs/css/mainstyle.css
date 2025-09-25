@@ -1,11 +1,15 @@
 /* Base theme variables */
 :root {
-  --color-bg: #E5E5E5;       /* Light background */
+  --color-bg: #E5E5E5;
+  /* Light background */
   --color-bg-secondary: #FFFFFF;
-  --color-text: #1C1C1C;      /* Primary text */
+  --color-text: #1C1C1C;
+  /* Primary text */
   --color-text-secondary: #333333;
-  --color-accent: #1976D2;    /* Cyber blue */
-  --color-accent-secondary: #00B8D9; /* Optional cyan accent */
+  --color-accent: #1976D2;
+  /* Cyber blue */
+  --color-accent-secondary: #00B8D9;
+  /* Optional cyan accent */
   --color-nav-bg: var(--color-accent);
   --color-text-primary: #001B36;
 }
@@ -13,7 +17,7 @@
 /* Automatically apply dark mode if user's OS prefers it */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #040f18;       
+    --color-bg: #040f18;
     --color-bg-secondary: #001B36;
     --color-text: #E5E5E5;
     --color-text-secondary: #CCCCCC;
@@ -26,7 +30,7 @@
 
 /* Dark theme override */
 [data-theme="dark"] {
-  --color-bg: #040f18;       
+  --color-bg: #040f18;
   --color-bg-secondary: #001B36;
   --color-text: #E5E5E5;
   --color-text-secondary: #CCCCCC;
@@ -37,12 +41,16 @@
 }
 
 [data-theme="light"] {
-  --color-bg: #E5E5E5;       /* Light background */
+  --color-bg: #E5E5E5;
+  /* Light background */
   --color-bg-secondary: #FFFFFF;
-  --color-text: #1C1C1C;      /* Primary text */
+  --color-text: #1C1C1C;
+  /* Primary text */
   --color-text-secondary: #333333;
-  --color-accent: #1976D2;    /* Cyber blue */
-  --color-accent-secondary: #00B8D9; /* Optional cyan accent */
+  --color-accent: #1976D2;
+  /* Cyber blue */
+  --color-accent-secondary: #00B8D9;
+  /* Optional cyan accent */
   --color-nav-bg: var(--color-accent);
   --color-text-primary: #001B36;
 }
@@ -70,7 +78,8 @@ button {
 
 
 /* Make sure the body and html take up full height */
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
@@ -79,7 +88,8 @@ html, body {
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* full viewport height */
+  min-height: 100vh;
+  /* full viewport height */
 }
 
 /* Main takes up all the available space */
@@ -103,10 +113,19 @@ footer {
 .hero-logo {
   filter: drop-shadow(0 0 20px rgba(0, 123, 255, 0.6));
 }
+
 @keyframes pulseGlow {
-  0% { filter: drop-shadow(0 0 10px rgba(0, 123, 255, 0.4)); }
-  50% { filter: drop-shadow(0 0 20px rgba(0, 123, 255, 0.8)); }
-  100% { filter: drop-shadow(0 0 10px rgba(0, 123, 255, 0.4)); }
+  0% {
+    filter: drop-shadow(0 0 10px rgba(0, 123, 255, 0.4));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 20px rgba(0, 123, 255, 0.8));
+  }
+
+  100% {
+    filter: drop-shadow(0 0 10px rgba(0, 123, 255, 0.4));
+  }
 }
 
 .hero-logo {
@@ -141,7 +160,8 @@ footer {
   height: 100%;
   display: block;
   z-index: 0;
-  pointer-events: none; /* ensures buttons are clickable */
+  pointer-events: none;
+  /* ensures buttons are clickable */
 }
 
 .activity-card-photo {
@@ -162,24 +182,24 @@ footer {
   margin: 0 0;
 }
 
-.activity-card > h2 {
+.activity-card>h2 {
   color: var(--color-accent);
   size: 1rem;
 }
 
 #logo {
-    height: 2em;
+  height: 2em;
 }
 
 .navbar {
-    background-color: transparent !important;
-    /* background: #1e3ab4; */
-    /* background: #0f1216; */
-    background: var(--color-nav-bg) !important;
-    color: #ffffff;
-    font-size: large;
-    font-weight: 500;
-    transition: background-color 200ms linear;
+  background-color: transparent !important;
+  /* background: #1e3ab4; */
+  /* background: #0f1216; */
+  background: var(--color-nav-bg) !important;
+  color: #ffffff;
+  font-size: large;
+  font-weight: 500;
+  transition: background-color 200ms linear;
 }
 
 .navbar-brand {
@@ -209,18 +229,22 @@ footer {
 } */
 
 .navbar-toggler {
-    border: none !important;
-    background: none !important;
-    outline: none !important;
-    box-shadow: none !important;
+  border: none !important;
+  background: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 #navbarNav {
-    padding-left: 3vw;
+  padding-left: 3vw;
 }
 
 .nav-link {
-    color: #fff !important;
-    margin-right: 1.5rem;
-    transition: color 200ms linear;
+  color: #fff !important;
+  margin-right: 1.5rem;
+  transition: color 200ms linear;
+}
+
+.header-color {
+  color: var(--color-accent) !important;
 }
