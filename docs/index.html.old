@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url" content="https://cyberatstout.org/index.html"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Cyber@Stout - Stout Collegiate Cyber Defense Club"/>
+    <meta property="og:description" content="The University of Wisconsin Stout's Premier Collegiate Cyber Defense Club - Learn cybersecurity fundamentals, compete in national competitions, network with industry professionals, and join our thriving community of security enthusiasts and researchers."/>
+    <meta property="og:image" content="https://cyberatstout.org/branding/ccdl_banner_white.png"/>
+    <link rel="canonical" href="https://cyberatstout.org/index.html"/>
+    <meta name="description" content="Support the Cyber@Stout Collegiate Cyber Defense Competition Club by becoming a sponsor. Help fund our students and our mission to educate the community about computer security."/>
+    <title>Home | Cyber@Stout</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/branding/favicon_all/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/branding/favicon_all/apple-touch-icon.png"><!-- 180×180 -->
+    <link rel="manifest" href="/branding/favicon_all/site.webmanifest">
+</head>
+<body>
+    <header>
+    <div class="banner_padding">
+      <a aria-label="Cyber@Stout Home" data-discover="true" href="index.html"><img src="branding/cyberstout_banner2.png" alt="Cyber@Stout Logo" class="banner_logo" loading="eager"></a>
+    </div>
+
+    <!-- Hamburger Toggle Button for mobile -->
+    <button class="hamburger" aria-label="Toggle Menu">&#9776;</button>
+      
+    <nav class="button-container" id="button-container">
+      <button onclick="smoothScroll(document.getElementById('about'))">About Us</button>
+      <button onclick="location.href = 'sponsorship.html';">Sponsorship</button>
+      <button onclick="location.href = 'competition.html';">Competition</button>
+      <button onclick="location.href = 'calendar.html';">Calendar</button>
+      <button onclick="location.href = 'https://github.com/UWStout-CCDC/CTF-Writeups';">Writeups</button>
+      <button onclick="location.href = 'ctf.html';">CTF</button>
+    </nav>
+
+    <div class="discord_padding" id="button-container">
+      <button onclick="location.href = 'https://discord.gg/Re9pBtGxdz';">Join The Discord</button>
+      <button class="theme-toggle" id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite">
+        <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+            <mask class="moon" id="moon-mask">
+            <rect x="0" y="0" width="100%" height="100%" fill="white" />
+            <circle cx="24" cy="10" r="6" fill="black" />
+            </mask>
+            <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+            <g class="sun-beams" stroke="currentColor">
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </g>
+            </svg>
+        </button>
+    </div>
+  </header>
+        
+    <h1>Hello World Test 123</h1>
+    <div class="sponsor-banner">
+        <h2>Sponsors</h2>
+        <!-- Add Sponspor logos to the banner -->
+    </div>
+    <footer>
+        <p>© 2025 Cyber@Stout. All rights reserved.</p>
+    </footer>
+
+    <!-- Load JS -->
+    <script src="js/theme-toggle.js"></script>
+</body>
+</html>

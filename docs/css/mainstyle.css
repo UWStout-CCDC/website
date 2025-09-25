@@ -1,0 +1,226 @@
+/* Base theme variables */
+:root {
+  --color-bg: #E5E5E5;       /* Light background */
+  --color-bg-secondary: #FFFFFF;
+  --color-text: #1C1C1C;      /* Primary text */
+  --color-text-secondary: #333333;
+  --color-accent: #1976D2;    /* Cyber blue */
+  --color-accent-secondary: #00B8D9; /* Optional cyan accent */
+  --color-nav-bg: var(--color-accent);
+  --color-text-primary: #001B36;
+}
+
+/* Automatically apply dark mode if user's OS prefers it */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #040f18;       
+    --color-bg-secondary: #001B36;
+    --color-text: #E5E5E5;
+    --color-text-secondary: #CCCCCC;
+    --color-accent: #1976D2;
+    --color-accent-secondary: #00B8D9;
+    --color-nav-bg: #07141f;
+    --color-text-primary: #1976D2;
+  }
+}
+
+/* Dark theme override */
+[data-theme="dark"] {
+  --color-bg: #040f18;       
+  --color-bg-secondary: #001B36;
+  --color-text: #E5E5E5;
+  --color-text-secondary: #CCCCCC;
+  --color-accent: #1976D2;
+  --color-accent-secondary: #00B8D9;
+  --color-nav-bg: #07141f;
+  --color-text-primary: #1976D2;
+}
+
+[data-theme="light"] {
+  --color-bg: #E5E5E5;       /* Light background */
+  --color-bg-secondary: #FFFFFF;
+  --color-text: #1C1C1C;      /* Primary text */
+  --color-text-secondary: #333333;
+  --color-accent: #1976D2;    /* Cyber blue */
+  --color-accent-secondary: #00B8D9; /* Optional cyan accent */
+  --color-nav-bg: var(--color-accent);
+  --color-text-primary: #001B36;
+}
+
+body {
+  background-color: var(--color-bg) !important;
+  color: var(--color-text) !important;
+  transition: background-color 0.3s ease, color 0.3s ease !important;
+  overflow-x: hidden;
+}
+
+button {
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+/* Make sure the body and html take up full height */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Wrapper uses flexbox to push footer down */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+}
+
+/* Main takes up all the available space */
+main {
+  flex: 1;
+}
+
+/* Footer styling */
+footer {
+  background: var(--color-nav-bg);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* body {
+  background: linear-gradient(to bottom, #0a0f14, #0d131a);
+} */
+
+
+.hero-logo {
+  filter: drop-shadow(0 0 20px rgba(0, 123, 255, 0.6));
+}
+@keyframes pulseGlow {
+  0% { filter: drop-shadow(0 0 10px rgba(0, 123, 255, 0.4)); }
+  50% { filter: drop-shadow(0 0 20px rgba(0, 123, 255, 0.8)); }
+  100% { filter: drop-shadow(0 0 10px rgba(0, 123, 255, 0.4)); }
+}
+
+.hero-logo {
+  animation: pulseGlow 4s infinite;
+}
+
+.hero {
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* .hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #0d131a 0%, #0a0f14 100%);
+  overflow: hidden;
+} */
+
+.hero-title {
+  color: var(--color-accent) !important;
+}
+
+/* Shooting stars canvas fills the hero */
+#shootingStars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+  pointer-events: none; /* ensures buttons are clickable */
+}
+
+.activity-card-photo {
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-card-photo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.activity-card {
+  margin: 0 0;
+}
+
+.activity-card > h2 {
+  color: var(--color-accent);
+  size: 1rem;
+}
+
+#logo {
+    height: 2em;
+}
+
+.navbar {
+    background-color: transparent !important;
+    /* background: #1e3ab4; */
+    /* background: #0f1216; */
+    background: var(--color-nav-bg) !important;
+    color: #ffffff;
+    font-size: large;
+    font-weight: 500;
+    transition: background-color 200ms linear;
+}
+
+.navbar-brand {
+  padding-left: 2vw;
+  position: absolute;
+  left: 0.5rem;
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+}
+
+/* Hide .navbar-brand when its parent has .scrolled */
+.scrolled .navbar-brand {
+  display: none !important;
+}
+
+.scrolled #theme-toggle {
+  display: none !important;
+}
+
+
+
+/* #navbarNav {
+    padding-left: 2vw;
+    padding-right: 2vw;
+} */
+
+.navbar-toggler {
+    border: none !important;
+    background: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#navbarNav {
+    padding-left: 3vw;
+}
+
+.nav-link {
+    color: #fff !important;
+    margin-right: 1.5rem;
+    transition: color 200ms linear;
+}

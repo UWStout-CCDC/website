@@ -1,76 +1,328 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:url" content="https://cyberatstout.org/index.html"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:title" content="Cyber@Stout - Stout Collegiate Cyber Defense Club"/>
-    <meta property="og:description" content="The University of Wisconsin Stout's Premier Collegiate Cyber Defense Club - Learn cybersecurity fundamentals, compete in national competitions, network with industry professionals, and join our thriving community of security enthusiasts and researchers."/>
-    <meta property="og:image" content="https://cyberatstout.org/branding/ccdl_banner_white.png"/>
-    <link rel="canonical" href="https://cyberatstout.org/index.html"/>
-    <meta name="description" content="Support the Cyber@Stout Collegiate Cyber Defense Competition Club by becoming a sponsor. Help fund our students and our mission to educate the community about computer security."/>
-    <title>Home | Cyber@Stout</title>
-    <link rel="stylesheet" href="css/stylesheet.css">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/branding/favicon_all/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/branding/favicon_all/apple-touch-icon.png"><!-- 180×180 -->
-    <link rel="manifest" href="/branding/favicon_all/site.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="css/mainstyle.css">
+    <title>Document</title>
+    <script>
+        function toggleNavbar() {
+            const navbar = document.querySelector(".navbar-collapse");
+            const navbarFull = document.getElementById("navbar");
+            if (navbar.classList.contains("show")) {
+                navbar.classList.remove("show");
+                if (window.scrollY == 0) {
+                    navbarFull.classList.remove("scrolled");
+                }
+            } else {
+                navbar.classList.add("show");
+                navbarFull.classList.add("scrolled");
+            }
+        }
+    </script>
 </head>
-<body>
-    <header>
-    <div class="banner_padding">
-      <a aria-label="Cyber@Stout Home" data-discover="true" href="index.html"><img src="branding/cyberstout_banner2.png" alt="Cyber@Stout Logo" class="banner_logo" loading="eager"></a>
-    </div>
 
-    <!-- Hamburger Toggle Button for mobile -->
-    <button class="hamburger" aria-label="Toggle Menu">&#9776;</button>
-      
-    <nav class="button-container" id="button-container">
-      <button onclick="smoothScroll(document.getElementById('about'))">About Us</button>
-      <button onclick="location.href = 'sponsorship.html';">Sponsorship</button>
-      <button onclick="location.href = 'competition.html';">Competition</button>
-      <button onclick="location.href = 'calendar.html';">Calendar</button>
-      <button onclick="location.href = 'https://github.com/UWStout-CCDC/CTF-Writeups';">Writeups</button>
-      <button onclick="location.href = 'ctf.html';">CTF</button>
-    </nav>
-
-    <div class="discord_padding" id="button-container">
-      <button onclick="location.href = 'https://discord.gg/Re9pBtGxdz';">Join The Discord</button>
-      <button class="theme-toggle" id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite">
-        <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
-            <mask class="moon" id="moon-mask">
-            <rect x="0" y="0" width="100%" height="100%" fill="white" />
-            <circle cx="24" cy="10" r="6" fill="black" />
-            </mask>
-            <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
-            <g class="sun-beams" stroke="currentColor">
-                <line x1="12" y1="1" x2="12" y2="3" />
-                <line x1="12" y1="21" x2="12" y2="23" />
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-                <line x1="1" y1="12" x2="3" y2="12" />
-                <line x1="21" y1="12" x2="23" y2="12" />
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-            </g>
-            </svg>
+<header>
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top justify-content-center">
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="navbar-item">
+                    <a href="/" class="nav-link">About Us</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="/about" class="nav-link">Sponsorship</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="/sponsorship" class="nav-link">Competition</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="/competition" class="nav-link">Calendar</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="/calendar" class="nav-link">Writeups</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="/ctf" class="nav-link">CTFs</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-brand">
+            <a href="/">
+                <img id="logo" src="branding/cyberstout_banner_3.png" alt="Logo">
+            </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleNavbar()">
+            <span class="navbar-toggler-icon"></span>
         </button>
-    </div>
-  </header>
-        
-    <h1>Hello World Test 123</h1>
-    <div class="sponsor-banner">
-        <h2>Sponsors</h2>
-        <!-- Add Sponspor logos to the banner -->
-    </div>
-    <footer>
-        <p>© 2025 Cyber@Stout. All rights reserved.</p>
-    </footer>
+        <button id="theme-toggle"
+            style="position: absolute; right: 1.5rem; background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; top: 0; bottom: 0; height: 100%;">
+            <i class="bi bi-moon"></i>
+        </button>
+    </nav>
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        const root = document.documentElement;
 
-    <!-- Load JS -->
-    <script src="js/theme-toggle.js"></script>
+        // Set the initial theme icon based on the current theme
+        const currentTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        toggle.innerHTML = currentTheme === 'dark' ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon"></i>';
+
+        if (root.getAttribute('data-theme') === null) {
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            root.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+        }
+
+        toggle.addEventListener('click', () => {
+            const currentTheme = root.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            root.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            toggle.innerHTML = newTheme === 'dark' ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon"></i>';
+        });
+    </script>
+    <script>
+        function updateLogo() {
+            const theme = document.documentElement.getAttribute('data-theme');
+            const logo = document.getElementById('logo');
+            if (theme === 'dark') {
+                logo.src = 'branding/cyberstout_banner_2.png';
+            } else {
+                logo.src = 'branding/cyberstout_banner_3.png';
+            }
+        }
+        updateLogo();
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+            setTimeout(updateLogo, 0);
+        });
+    </script>
+</header>
+
+
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero relative overflow-hidden">
+        <div class="d-flex flex-column align-items-center justify-content-center text-center"
+            style="min-height: 100vh; width: 100vw; display: flex; justify-content: center; align-items: center; margin: 0; padding: 0;">
+            <canvas id="shootingStars"></canvas>
+            <div class="hero">
+                <h1 class="mb-0 py-4 hero-title">Cyber@Stout</h1>
+                <img id="logo-img" class="hero-logo" src="branding/cyberstout_logo.png" alt="Cyber@Stout Logo" />
+                <h2 class="mt-2">We are UW-Stout's Premier Cybersecurity Club.</h2>
+                <p class="mt-2">Join us in our mission to promote cybersecurity awareness and education.</p>
+                <a href="/about" class="btn btn-primary mt-3">Learn More</a>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Configurable parameters
+        const STAR_COUNT = 6;
+        const TRAIL_LENGTH = 80; // More spread out trail
+        // Set star and trail colors based on theme
+        function getStarColors() {
+            const theme = document.documentElement.getAttribute('data-theme') || 'light';
+            if (theme === 'dark') {
+                return {
+                    //STAR_COLOR: 'rgba(0, 200, 255, 1)',
+                    STAR_COLOR: 'rgba(0, 200, 255, 0)',
+                    TRAIL_COLOR: 'rgba(0, 200, 255, 0.6)'
+                };
+            } else {
+                return {
+                    //STAR_COLOR: 'rgba(0, 120, 200, 1)',
+                    STAR_COLOR: 'rgba(0, 120, 200, 0)',
+                    TRAIL_COLOR: 'rgba(0, 120, 200, 0.5)'
+                };
+            }
+        }
+        let { STAR_COLOR, TRAIL_COLOR } = getStarColors();
+
+        // Update colors on theme change
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+            setTimeout(() => {
+                ({ STAR_COLOR, TRAIL_COLOR } = getStarColors());
+            }, 0);
+        });
+        const STAR_RADIUS = 2;
+        const STAR_MIN_SPEED = 1; // Slower min speed
+        const STAR_MAX_SPEED = 10; // Slower max speed
+        const STAR_MIN_LENGTH = 80;
+        const STAR_MAX_LENGTH = 130;
+        const STAR_MIN_ANGLE = Math.PI / 6; // More spread
+        const STAR_MAX_ANGLE = Math.PI / 2.2;
+        const STAR_FADE_RATE = 0.0015; // Slower fade
+        const STAR_FONT = '12px monospace';
+        const STAR_TIME = 0; // Not used directly, but can be used for timing logic if needed
+
+        const canvas = document.getElementById('shootingStars');
+        const ctx = canvas.getContext('2d');
+
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        });
+
+        // Shooting star object
+        class ShootingStar {
+            constructor() {
+                this.reset();
+            }
+
+            reset() {
+                this.x = Math.random() * width;
+                this.y = -20;
+                this.len = Math.random() * (STAR_MAX_LENGTH - STAR_MIN_LENGTH) + STAR_MIN_LENGTH;
+                this.speed = Math.random() * (STAR_MAX_SPEED - STAR_MIN_SPEED) + STAR_MIN_SPEED;
+                this.angle = Math.random() * (STAR_MAX_ANGLE - STAR_MIN_ANGLE) + STAR_MIN_ANGLE;
+                this.opacity = 1;
+                this.trail = [];
+            }
+
+            update() {
+                this.x += Math.cos(this.angle) * this.speed;
+                this.y += Math.sin(this.angle) * this.speed;
+                this.opacity -= STAR_FADE_RATE;
+
+                // Add trail positions
+                this.trail.push({ x: this.x, y: this.y, opacity: 1, digit: Math.random() > 0.5 ? '1' : '0' });
+                if (this.trail.length > TRAIL_LENGTH) this.trail.shift();
+
+                if (this.opacity <= 0 || this.x > width + 100 || this.y > height + 100) {
+                    this.reset();
+                }
+            }
+
+            draw() {
+                // Draw trail digits
+                this.trail.forEach((t, i) => {
+                    //ctx.globalAlpha = t.opacity * (1 - i / this.trail.length);
+                    ctx.globalAlpha = t.opacity * (i / this.trail.length);
+                    ctx.fillStyle = TRAIL_COLOR;
+                    ctx.font = STAR_FONT;
+                    ctx.fillText(t.digit, t.x, t.y);
+                });
+
+                // Draw star head
+                ctx.globalAlpha = this.opacity;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, STAR_RADIUS, 0, Math.PI * 2);
+                ctx.fillStyle = STAR_COLOR;
+                ctx.fill();
+                ctx.globalAlpha = 1;
+            }
+        }
+
+        const stars = Array.from({ length: STAR_COUNT }, () => new ShootingStar());
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+
+            stars.forEach(star => {
+                star.update();
+                star.draw();
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
+
+    <div id="club-activities" class="container" style="padding: 2rem; max-width: 90%;">
+        <h1 class="text-center">Club Activities</h1>
+        <div class="row justify-content-center" style="margin-top: 2rem;">
+            <div class="text-center col-sm-8 col-xlg-5 col-xl-3 mb-4 activity-card">
+                <h2>Club Activities</h2>
+                <div>
+                    <img class="activity-card-photo" src="branding/activities/chicago_stpatricks.jpg" alt=""
+                        style="max-width:100%; height:auto; display:block; margin:0 auto;">
+                </div>
+                <hr style="width: 50px; border: 2px solid var(--color-primary); margin: 0.5rem auto 1rem auto;">
+                <p>We are a cybersecurity club focused on competitions, learning, and community involvement. Some things
+                    we do include industry talks. We often have industry professionals talk to our club and inform us on
+                    the latest in cyber security.</p>
+            </div>
+            <div class="text-center col-sm-8 col-lg-5 col-xl-3 mb-4 activity-card">
+                <h2>Competitions</h2>
+                <div>
+                    <img class="activity-card-photo" src="branding/activities/ccdc.jpg" alt=""
+                        style="max-width:100%; height:auto; display:block; margin:0 auto;">
+                </div>
+                <hr style="width: 50px; border: 2px solid var(--color-primary); margin: 0.5rem auto 1rem auto;">
+                <p>At Cyber@Stout we take competition very seriously. We compete in several industry competitions. These
+                    being CCDC, CPTC, NCL, NCAE, with more in the works. Our skills can be seen above at the CCDC
+                    Midwest Regionals Competition.</p>
+            </div>
+            <div class="text-center col-sm-8 col-lg-5 col-xl-3 mb-4 activity-card">
+                <h2>Fun</h2>
+                <div>
+                    <img class="activity-card-photo" src="branding/activities/cabelas.jpg" alt=""
+                        style="max-width:100%; height:auto; display:block; margin:0 auto;">
+                </div>
+                <hr style="width: 50px; border: 2px solid var(--color-primary); margin: 0.5rem auto 1rem auto;">
+                <p>We as a club also love to have fun. Throughout the year we have fun events such as our cookouts, red
+                    team nights, open tool nights and more. Cookouts take place at the start of the academic year and at
+                    the end of year.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div style="padding: 1rem; max-width: 800px; margin: 0 auto; text-align: center;">
+        <p>Welcome to the official website of Cyber@Stout, the cybersecurity club at the University of Wisconsin-Stout.
+            Our mission is to foster a community of students passionate about cybersecurity, providing opportunities for
+            learning, collaboration, and professional growth.</p>
+        <p>Whether you're a beginner looking to learn the basics or an experienced professional seeking to deepen your
+            knowledge, Cyber@Stout has something for everyone. Join us for workshops, guest lectures, competitions, and
+            networking events that will help you stay ahead in the ever-evolving field of cybersecurity.</p>
+        <p>Explore our website to learn more about our club, upcoming events, and how you can get involved. Together,
+            let's build a safer digital world!</p>
+    </div> -->
 </body>
+
+<footer>
+    <div class="text-center pt-4 ">
+        <h3><b>Stay Connected</b></h3>
+        <p class="col-sm-8 col-lg-6" style="width: 50%; margin: 0 auto; margin-top: 2rem;">You can follow us on social
+            media
+            to stay
+            informed about
+            upcoming events or
+            opportunities.
+            Make sure to join our
+            Discord whether you are a Stout student or not!</p>
+        <div style="margin-bottom: 1rem; margin-top: 2rem;">
+            <a href="https://www.linkedin.com/company/cyberstout/" target="_blank" class="btn btn-outline-light mx-1"
+                style="display: inline-flex; align-items: center;">
+                <i class="bi bi-linkedin" style="font-size: 1.2rem;"></i>
+            </a>
+            <a href="https://github.com/UWStout-CCDC" target="_blank" class="btn btn-outline-light mx-1"
+                style="display: inline-flex; align-items: center;">
+                <i class="bi bi-github" style="font-size: 1.2rem;"></i>
+            </a>
+            <a href="https://discord.gg/WnM73rQFCY" target="_blank" class="btn btn-outline-light mx-1"
+                style="display: inline-flex; align-items: center;">
+                <i class="bi bi-discord" style="font-size: 1.2rem;"></i>
+            </a>
+        </div>
+        <p style="margin-bottom: 0.5rem; color: var(--color-text-primary);">&copy;
+            <script>document.write(new Date().getFullYear())</script> Cyber@Stout. All rights reserved.
+        </p>
+        <p style="margin: 0; margin-bottom: 0; font-size: 0.9rem;">Made with <i class="bi bi-heart"
+                style="color: var(--color-text-primary);"></i>
+            by <a href="https://github.com/NotEnoughAuth" target="_blank"
+                style="color: var(--color-text-primary);">NotEnoughAuth</a> &amp;
+            <a href="https://github.com/doshowipospf" target="_blank"
+                style="color: var(--color-text-primary);">doshowipospf</a>
+        </p>
+    </div>
+</footer>
+
 </html>
