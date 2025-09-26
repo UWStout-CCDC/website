@@ -254,3 +254,11 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.legal-disclaimer {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
