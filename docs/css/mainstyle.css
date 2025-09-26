@@ -248,3 +248,9 @@ footer {
 .header-color {
   color: var(--color-accent) !important;
 }
+
+.calendar-container {
+  padding: 8rem 2rem 2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}

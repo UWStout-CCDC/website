@@ -6,7 +6,18 @@
 
       <loc>https://cyberatstout.org/index.html</loc>
 
-      <lastmod>2025-09-21</lastmod>
+      <lastmod>2025-09-25</lastmod>
+
+      <changefreq>yearly</changefreq>
+
+      <priority>0.9</priority>
+
+   </url>
+   <url>
+
+      <loc>https://cyberatstout.org/about/index.html</loc>
+
+      <lastmod>2025-09-25</lastmod>
 
       <changefreq>yearly</changefreq>
 
@@ -26,29 +37,7 @@
    </url>
    <url>
 
-      <loc>https://cyberatstout.org/ctf.html</loc>
-
-      <lastmod>2025-09-21</lastmod>
-
-      <changefreq>monthly</changefreq>
-
-      <priority>0.8</priority>
-
-   </url>
-   <url>
-
-      <loc>https://cyberatstout.org/competition.html</loc>
-
-      <lastmod>2025-09-21</lastmod>
-
-      <changefreq>yearly</changefreq>
-
-      <priority>0.8</priority>
-
-   </url>
-   <url>
-
-      <loc>https://cyberatstout.org/calendar.html</loc>
+      <loc>https://cyberatstout.org/calendar/index.html</loc>
 
       <lastmod>2025-09-21</lastmod>
 
@@ -57,16 +46,5 @@
       <priority>0.7</priority>
 
    </url>
-   <url>
 
-      <loc>https://cyberatstout.org/sponsorship.html</loc>
-
-      <lastmod>2025-09-21</lastmod>
-
-      <changefreq>yearly</changefreq>
-
-      <priority>0.9</priority>
-
-   </url>
-
-</urlset> 
+</urlset>
