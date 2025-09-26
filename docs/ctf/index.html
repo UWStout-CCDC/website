@@ -21,7 +21,7 @@
     <link rel="canonical" href="https://cyberatstout.org/index.html" />
     <meta name="description"
         content="Support the Cyber@Stout Collegiate Cyber Defense Competition Club by becoming a sponsor. Help fund our students and our mission to educate the community about computer security." />
-    <title>About | Cyber@Stout</title>
+    <title>CTF | Cyber@Stout</title>
     <link rel="icon" type="image/x-icon" href="../branding/favicon_all/favicon.ico" sizes="32x32">
     <link rel="shortcut icon" href="../branding/favicon_all/favicon.ico" type="image/x-icon">
     <link rel="icon" href="../branding/favicon_all/icon.svg" type="image/svg+xml">
@@ -53,7 +53,7 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="navbar-item">
-                    <a href="." class="nav-link">About Us</a>
+                    <a href="../about" class="nav-link">About Us</a>
                 </li>
                 <li class="navbar-item">
                     <a href="../sponsorship" class="nav-link">Sponsorship</a>
@@ -74,7 +74,7 @@
         </div>
         <div class="navbar-brand">
             <a href="../">
-                <img id="logo" src="branding/cyberstout_banner_3.png" alt="Logo">
+                <img id="logo" src="../branding/cyberstout_banner_3.png" alt="Logo">
             </a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -123,38 +123,127 @@
         });
     </script>
 </header>
-
-
 <body>
-    <main class="container my-5 pt-5">
-        <div class="text-center mb-5">
-            <h1>About Cyber@Stout</h1>
-            <p class="lead">Learn more about our mission, values, and the team behind Cyber@Stout.</p>
+<div class="ctf-top">
+    <h1 class="">
+      Cybersecurity is crucial.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Join the fight.
+    </h1>
+  </div>
+  <div class="ctf-container">
+    <div class="ctf-textpost" id="ctf-textpost">
+      <h1 id="ctf">Capture The Flag</h1>
+      <hr>
+      <p>
+        Cyber@Stout hosts a Capture The Flag (CTF) competition every semester. CTFs are a fun way to learn and practice cybersecurity skills in a competitive environment. Participants solve challenges that simulate real-world security scenarios, ranging from web vulnerabilities to cryptography.
+      </p>
+      <p>
+        Our CTFs are open to all skill levels, from beginners to advanced players. We provide resources and support to help you learn and improve your skills. Join us for an exciting and educational experience!
+      </p>
+    </div>
+  </div>
+
+  <div class="ctf-container">
+    <div class="ctf-textpost" id="ctf-textpost">
+      <h1 id="ctf">Learn to Hack</h1>
+      <hr>
+      <p>
+        To help you prepare for our CTFs, we have compiled a list of resources and tools that can assist you in learning and practicing cybersecurity skills:
+      </p>
+      <ul>
+        <li><a href="https://tryhackme.com/">TryHackMe</a> - Interactive cybersecurity training platform with hands-on labs.</li>
+        <li><a href="https://www.hackthebox.eu/">Hack The Box</a> - Online platform to test and advance your skills in penetration testing.</li>
+        <li><a href="https://www.overthewire.org/wargames/">OverTheWire</a> - Wargames to practice various security concepts.</li>
+        <li><a href="https://www.picoctf.org/">picoCTF</a> - Educational CTF platform for beginners.</li>
+      </ul>
+      <p>
+        We also recommend joining our Discord server where you can find teammates, ask questions, and share knowledge with the community.
+      </p>
+      <!-- From Uiverse.io by ilkhoeri -->
+    <div class="card">
+      <div class="wrap">
+        <div class="terminal">
+          <hgroup class="head">
+            <p class="title-terminal">
+              <svg
+                width="16px"
+                height="16px"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+              >
+                <path
+                  d="M7 15L10 12L7 9M13 15H17M7.8 21H16.2C17.8802 21 18.7202 21 19.362 20.673C19.9265 20.3854 20.3854 19.9265 20.673 19.362C21 18.7202 21 17.8802 21 16.2V7.8C21 6.11984 21 5.27976 20.673 4.63803C20.3854 4.07354 19.9265 3.6146 19.362 3.32698C18.7202 3 17.8802 3 16.2 3H7.8C6.11984 3 5.27976 3 4.63803 3.32698C4.07354 3.6146 3.6146 4.07354 3.32698 4.63803C3 5.27976 3 6.11984 3 7.8V16.2C3 17.8802 3 18.7202 3.32698 19.362C3.6146 19.9265 4.07354 20.3854 4.63803 20.673C5.27976 21 6.11984 21 7.8 21Z"
+                ></path>
+              </svg>
+              Terminal
+            </p>
+
+            <button class="copy_toggle" tabindex="-1" type="button" id="copyButton">
+              <svg
+                width="16px"
+                height="16px"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+              >
+                <path
+                  d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"
+                ></path>
+                <path
+                  d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"
+                ></path>
+              </svg>
+            </button>
+            <script>
+              const copyButton = document.getElementById('copyButton');
+              const textToCopy = "nmap -p 443 -A -T5 --script=https* 127.0.0.1";
+
+              copyButton.addEventListener('click', async () => {
+                try {
+                  await navigator.clipboard.writeText(textToCopy);
+                } catch (err) {
+                  console.error('Failed to copy text: ', err);
+                }
+              });
+            </script>
+          </hgroup>
+
+          <div class="body">
+            <pre class="pre">
+              <code>$&nbsp;</code>
+              <code>nmap&nbsp;</code>
+              <code class="cmd" data-cmd="-p 443 -A -T5 --script=https* 127.0.0.1"></code>
+            </pre>
+          </div>
         </div>
+      </div>
+    </div>
+    </div>
 
-        <section class="mb-5">
-            <h2 class="header-color">Our Mission</h2>
-            <p>Cyber@Stout is dedicated to fostering a community of cybersecurity enthusiasts at the University of
-                Wisconsin-Stout. Our mission is to provide students with opportunities to learn, compete, and grow in
-                the field of cybersecurity through hands-on experiences and collaboration.</p>
-        </section>
-
-        <section class="mb-5">
-            <h2 class="header-color">Our Story</h2>
-            <p>UW-Stout has had a club dedicated to competing in the Collegiate Cyber Defense Competition for several
-                years. We have won state 5 years in a row. Stout also had another cybersecurity club on campus that has
-                since merged with us, allowing us to grow and strengthen our community. We have grown immensley over the
-                years, from a mere 8 people to a thriving group of over 25+ active members and growing.</p>
-            <p>With the full support of our club advisor Dr. Holly Yuan, we were able to make a bunch of industry
-                connections to help grow the club. Today we have speakers from various companies and organizations
-                willing to share their knowledge and expertise with our members.</p>
-            <p>We have also since grown the club instead of just competing in CCDC. We now compete in a number of
-                competitions to help our members grow their skills, and spread the joy of competing in cybersecurity
-                competitions to all our members.</p>
-        </section>
-    </main>
+  <div class="ctf-container">
+    <div class="ctf-textpost" id="ctf-textpost">
+      <h1 id="ctf">Upcoming CTFs</h1>
+      <hr>
+      <p>
+        Stay tuned for our next CTF competition! We will announce the date and details on our Discord server and social media channels. Make sure to join us for a chance to win prizes and showcase your skills!
+      </p>
+      <p>
+        If you have any questions or suggestions for future CTFs, feel free to reach out to us on Discord or via email.
+      </p>
+      <h2>Join the <a href="https://discord.gg/TSGHVgYq56">CTF Discord</a></h2>
+    </div>
+  </div>
 </body>
-
 <footer>
     <div class="text-center pt-4 ">
         <h3><b>Stay Connected</b></h3>
@@ -187,7 +276,7 @@
                 style="color: var(--color-text-primary);"></i>
             by <a href="https://github.com/NotEnoughAuth" target="_blank"
                 style="color: var(--color-text-primary);">NotEnoughAuth</a> &amp;
-            <a href="https://github.com/doshowipospf" target="_blank"
+            <a href="https://github.com/DiverseDark67" target="_blank"
                 style="color: var(--color-text-primary);">doshowipospf</a>
         </p>
     </div>
