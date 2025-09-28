@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /js/
+Disallow: /branding/
+Disallow: /css/
+Allow: /
+Allow: /favicon.ico
+
+Sitemap: https://cyberatstout.org/sitemap.xml
