@@ -77,22 +77,27 @@
                 <img id="logo" src="../branding/cyberstout_banner_3.png" alt="Logo">
             </a>
         </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleNavbar()">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <button id="theme-toggle"
+        <div class="ms-auto d-flex align-items-center">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleNavbar()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <!-- <button id="theme-toggle"
             style="position: absolute; right: 1.5rem; background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; top: 0; bottom: 0; height: 100%;">
             <i class="bi bi-moon"></i>
-        </button>
+        </button> -->
     </nav>
     <script>
         const toggle = document.getElementById('theme-toggle');
         const root = document.documentElement;
 
         // Set the initial theme icon based on the current theme
-        const currentTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-        toggle.innerHTML = currentTheme === 'dark' ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon"></i>';
+        // const currentTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        // toggle.innerHTML = currentTheme === 'dark' ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon"></i>';
+
+        // Disable automatic theme detection and default to dark mode
+        const currentTheme = 'dark';
 
         if (root.getAttribute('data-theme') === null) {
             const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -123,32 +128,47 @@
         });
     </script>
 </header>
+
 <body>
-<div class="sponsor-container container my-5 pt-5">
-    <div class="sponsor-title text-center mb-5">
-        <h1>Sponsorship</h1>
-        <p class="lead">Support the Cyber@Stout Collegiate Cyber Defense League by becoming a sponsor.</p>
-    </div>
-    <div class="sponsor-row">
-      <div class="sponsor-column">
-        <div class="sponsor-information">
-          We are a community of cyber security minded professionals on campus at the University of Wisconsin Stout. Each member works to support each other through the sharing of knowledge and passion for computer security. We also reach out to educate our local community about computer security through public events and forums.
-          <br><br>We are looking for organizations willing to support our students and our mission while we strive to produce high-valued results. Our club is primarily funded through corporate sponsorships and private donations which help offset the costs associated with participating in competitions, team travel, training, and equipment. We also welcome in-kind donations—hardware, software, training subscriptions, peripheral devices, etc.—that support who we are and what we do.
-          <br><br>Every donation is greatly appreciated and recognized as a contribution to our continued success. <!-- Properly designated donations made to us (Collegiate Cyber Defense League) a 501(c)(3) non-profit organization, may be tax deductible. -->
-          <br><br>Learn how to officially sponsor us by reaching out via <a href="mailto:stoutcyber@gmail.com">stoutcyber@gmail.com</a>.
-          <br><br>For our nonprofit's incorporated bylaws, visit <a href="https://docs.google.com/document/d/1AWh3mkffskdjzqD81kwLOuhIaMC53qIxK4qmpKOh02s/edit?usp=sharing">cyberatstout.org/bylaws</a>.
+    <div class="sponsor-container container my-5 pt-5">
+        <div class="sponsor-title text-center mb-5">
+            <h1>Sponsorship</h1>
+            <p class="lead">Support the Cyber@Stout Collegiate Cyber Defense League by becoming a sponsor.</p>
         </div>
-      </div>
+        <div class="sponsor-row">
+            <div class="sponsor-column">
+                <div class="sponsor-information">
+                    We are a community of cyber security minded professionals on campus at the University of Wisconsin
+                    Stout. Each member works to support each other through the sharing of knowledge and passion for
+                    computer security. We also reach out to educate our local community about computer security through
+                    public events and forums.
+                    <br><br>We are looking for organizations willing to support our students and our mission while we
+                    strive to produce high-valued results. Our club is primarily funded through corporate sponsorships
+                    and private donations which help offset the costs associated with participating in competitions,
+                    team travel, training, and equipment. We also welcome in-kind donations—hardware, software, training
+                    subscriptions, peripheral devices, etc.—that support who we are and what we do.
+                    <br><br>Every donation is greatly appreciated and recognized as a contribution to our continued
+                    success.
+                    <!-- Properly designated donations made to us (Collegiate Cyber Defense League) a 501(c)(3) non-profit organization, may be tax deductible. -->
+                    <br><br>Learn how to officially sponsor us by reaching out via <a
+                        href="mailto:stoutcyber@gmail.com">stoutcyber@gmail.com</a>.
+                    <br><br>For our nonprofit's incorporated bylaws, visit <a
+                        href="https://docs.google.com/document/d/1AWh3mkffskdjzqD81kwLOuhIaMC53qIxK4qmpKOh02s/edit?usp=sharing">cyberatstout.org/bylaws</a>.
+                </div>
+            </div>
+        </div>
+        <div class="text-center my-5">
+            <a href="mailto:stoutcyber@gmail.com" class="btn btn-primary btn-lg">
+                Become a Sponsor – Email Us
+            </a>
+        </div>
+        <p class="legal-disclaimer mt-5"> A COPY OF THE OFFICIAL REGISTRATION AND FINANCIAL INFORMATION MAY BE OBTAINED
+            FROM THE DIVISION OF CONSUMER SERVICES BY CALLING TOLL-FREE WITHIN THE STATE.
+            <br>REGISTRATION DOES NOT IMPLY ENDORSEMENT, APPROVAL, OR RECOMMENDATION BY THE STATE. Call: (608) 224-5012
+            or at DATCP.WI.GOV.
+        </p>
     </div>
-    <div class="text-center my-5">
-        <a href="mailto:stoutcyber@gmail.com" class="btn btn-primary btn-lg">
-            Become a Sponsor – Email Us
-        </a>
-    </div>
-    <p class="legal-disclaimer mt-5"> A COPY OF THE OFFICIAL REGISTRATION AND FINANCIAL INFORMATION MAY BE OBTAINED FROM THE DIVISION OF CONSUMER SERVICES BY CALLING TOLL-FREE WITHIN THE STATE.
-    <br>REGISTRATION DOES NOT IMPLY ENDORSEMENT, APPROVAL, OR RECOMMENDATION BY THE STATE. Call: (608) 224-5012 or at DATCP.WI.GOV.</p>
-  </div>
-  
+
 </body>
 <footer>
     <div class="text-center pt-4 ">

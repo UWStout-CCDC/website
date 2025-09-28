@@ -2,131 +2,137 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:url" content="https://cyberatstout.org/index.html" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Cyber@Stout - Stout Collegiate Cyber Defense Club" />
-    <meta property="og:description"
-        content="The University of Wisconsin Stout's Premier Collegiate Cyber Defense Club - Learn cybersecurity fundamentals, compete in national competitions, network with industry professionals, and join our thriving community of security enthusiasts and researchers." />
-    <meta property="og:image" content="https://cyberatstout.org/assets/ccdl_banner_white.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@CyberStout" />
-    <meta name="twitter:creator" content="@CyberStout" />
-    <meta name="twitter:title" content="Cyber@Stout - Stout's Collegiate Cyber Defense Club" />
-    <meta name="twitter:description"
-        content="The University of Wisconsin Stout's Premier Collegiate Cyber Defense Club - Learn cybersecurity fundamentals, compete in national competitions, network with industry professionals, and join our thriving community of security enthusiasts and researchers." />
-    <meta name="twitter:image" content="https://cyberatstout.org/assets/ccdl_banner_white.png" />
-    <link rel="canonical" href="https://cyberatstout.org/index.html" />
-    <meta name="description"
-        content="Support the Cyber@Stout Collegiate Cyber Defense Competition Club by becoming a sponsor. Help fund our students and our mission to educate the community about computer security." />
-    <title>CTF | Cyber@Stout</title>
-    <link rel="icon" type="image/x-icon" href="../branding/favicon_all/favicon.ico" sizes="32x32">
-    <link rel="shortcut icon" href="../branding/favicon_all/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../branding/favicon_all/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../branding/favicon_all/apple-touch-icon.png"><!-- 180×180 -->
-    <link rel="manifest" href="../branding/favicon_all/site.webmanifest">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/mainstyle.css">
-    <link rel="stylesheet" href="../css/ctf.css">
-    <script>
-        function toggleNavbar() {
-            const navbar = document.querySelector(".navbar-collapse");
-            const navbarFull = document.getElementById("navbar");
-            if (navbar.classList.contains("show")) {
-                navbar.classList.remove("show");
-                if (window.scrollY == 0) {
-                    navbarFull.classList.remove("scrolled");
-                }
-            } else {
-                navbar.classList.add("show");
-                navbarFull.classList.add("scrolled");
-            }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:url" content="https://cyberatstout.org/index.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Cyber@Stout - Stout Collegiate Cyber Defense Club" />
+  <meta property="og:description"
+    content="The University of Wisconsin Stout's Premier Collegiate Cyber Defense Club - Learn cybersecurity fundamentals, compete in national competitions, network with industry professionals, and join our thriving community of security enthusiasts and researchers." />
+  <meta property="og:image" content="https://cyberatstout.org/assets/ccdl_banner_white.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@CyberStout" />
+  <meta name="twitter:creator" content="@CyberStout" />
+  <meta name="twitter:title" content="Cyber@Stout - Stout's Collegiate Cyber Defense Club" />
+  <meta name="twitter:description"
+    content="The University of Wisconsin Stout's Premier Collegiate Cyber Defense Club - Learn cybersecurity fundamentals, compete in national competitions, network with industry professionals, and join our thriving community of security enthusiasts and researchers." />
+  <meta name="twitter:image" content="https://cyberatstout.org/assets/ccdl_banner_white.png" />
+  <link rel="canonical" href="https://cyberatstout.org/index.html" />
+  <meta name="description"
+    content="Support the Cyber@Stout Collegiate Cyber Defense Competition Club by becoming a sponsor. Help fund our students and our mission to educate the community about computer security." />
+  <title>CTF | Cyber@Stout</title>
+  <link rel="icon" type="image/x-icon" href="../branding/favicon_all/favicon.ico" sizes="32x32">
+  <link rel="shortcut icon" href="../branding/favicon_all/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../branding/favicon_all/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../branding/favicon_all/apple-touch-icon.png"><!-- 180×180 -->
+  <link rel="manifest" href="../branding/favicon_all/site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/mainstyle.css">
+  <link rel="stylesheet" href="../css/ctf.css">
+  <script>
+    function toggleNavbar() {
+      const navbar = document.querySelector(".navbar-collapse");
+      const navbarFull = document.getElementById("navbar");
+      if (navbar.classList.contains("show")) {
+        navbar.classList.remove("show");
+        if (window.scrollY == 0) {
+          navbarFull.classList.remove("scrolled");
         }
-    </script>
+      } else {
+        navbar.classList.add("show");
+        navbarFull.classList.add("scrolled");
+      }
+    }
+  </script>
 </head>
 
 <header>
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top justify-content-center">
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="navbar-item">
-                    <a href="../about" class="nav-link">About Us</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="../sponsorship" class="nav-link">Sponsorship</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="../competition" class="nav-link">Competition</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="../calendar" class="nav-link">Calendar</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="https://github.com/UWStout-CCDC/CTF-Writeups" class="nav-link">Writeups</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="../ctf" class="nav-link">CTFs</a>
-                </li>
-            </ul>
-        </div>
-        <div class="navbar-brand">
-            <a href="../">
-                <img id="logo" src="../branding/cyberstout_banner_3.png" alt="Logo">
-            </a>
-        </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleNavbar()">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <button id="theme-toggle"
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top justify-content-center">
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="navbar-item">
+          <a href="../about" class="nav-link">About Us</a>
+        </li>
+        <li class="navbar-item">
+          <a href="../sponsorship" class="nav-link">Sponsorship</a>
+        </li>
+        <li class="navbar-item">
+          <a href="../competition" class="nav-link">Competition</a>
+        </li>
+        <li class="navbar-item">
+          <a href="../calendar" class="nav-link">Calendar</a>
+        </li>
+        <li class="navbar-item">
+          <a href="https://github.com/UWStout-CCDC/CTF-Writeups" class="nav-link">Writeups</a>
+        </li>
+        <li class="navbar-item">
+          <a href="../ctf" class="nav-link">CTFs</a>
+        </li>
+      </ul>
+    </div>
+    <div class="navbar-brand">
+      <a href="../">
+        <img id="logo" src="../branding/cyberstout_banner_3.png" alt="Logo">
+      </a>
+    </div>
+    <div class="ms-auto d-flex align-items-center">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <!-- <button id="theme-toggle"
             style="position: absolute; right: 1.5rem; background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; top: 0; bottom: 0; height: 100%;">
             <i class="bi bi-moon"></i>
-        </button>
-    </nav>
-    <script>
-        const toggle = document.getElementById('theme-toggle');
-        const root = document.documentElement;
+        </button> -->
+  </nav>
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const root = document.documentElement;
 
-        // Set the initial theme icon based on the current theme
-        const currentTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-        toggle.innerHTML = currentTheme === 'dark' ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon"></i>';
+    // Set the initial theme icon based on the current theme
+    // const currentTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    // toggle.innerHTML = currentTheme === 'dark' ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon"></i>';
 
-        if (root.getAttribute('data-theme') === null) {
-            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-            root.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
-        }
+    // Disable automatic theme detection and default to dark mode
+    const currentTheme = 'dark';
 
-        toggle.addEventListener('click', () => {
-            const currentTheme = root.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            root.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            toggle.innerHTML = newTheme === 'dark' ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon"></i>';
-        });
-    </script>
-    <script>
-        function updateLogo() {
-            const theme = document.documentElement.getAttribute('data-theme');
-            const logo = document.getElementById('logo');
-            if (theme === 'dark') {
-                logo.src = '../branding/cyberstout_banner_2.png';
-            } else {
-                logo.src = '../branding/cyberstout_banner_3.png';
-            }
-        }
-        updateLogo();
-        document.getElementById('theme-toggle').addEventListener('click', () => {
-            setTimeout(updateLogo, 0);
-        });
-    </script>
+    if (root.getAttribute('data-theme') === null) {
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      root.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+    }
+
+    toggle.addEventListener('click', () => {
+      const currentTheme = root.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      toggle.innerHTML = newTheme === 'dark' ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon"></i>';
+    });
+  </script>
+  <script>
+    function updateLogo() {
+      const theme = document.documentElement.getAttribute('data-theme');
+      const logo = document.getElementById('logo');
+      if (theme === 'dark') {
+        logo.src = '../branding/cyberstout_banner_2.png';
+      } else {
+        logo.src = '../branding/cyberstout_banner_3.png';
+      }
+    }
+    updateLogo();
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      setTimeout(updateLogo, 0);
+    });
+  </script>
 </header>
+
 <body>
-<div class="ctf-top">
+  <div class="ctf-top">
     <h1 class="">
       Cybersecurity is crucial.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Join the fight.
     </h1>
@@ -136,10 +142,13 @@
       <h1 id="ctf">Capture The Flag</h1>
       <hr>
       <p>
-        Cyber@Stout hosts a Capture The Flag (CTF) competition every semester. CTFs are a fun way to learn and practice cybersecurity skills in a competitive environment. Participants solve challenges that simulate real-world security scenarios, ranging from web vulnerabilities to cryptography.
+        Cyber@Stout hosts a Capture The Flag (CTF) competition every semester. CTFs are a fun way to learn and practice
+        cybersecurity skills in a competitive environment. Participants solve challenges that simulate real-world
+        security scenarios, ranging from web vulnerabilities to cryptography.
       </p>
       <p>
-        Our CTFs are open to all skill levels, from beginners to advanced players. We provide resources and support to help you learn and improve your skills. Join us for an exciting and educational experience!
+        Our CTFs are open to all skill levels, from beginners to advanced players. We provide resources and support to
+        help you learn and improve your skills. Join us for an exciting and educational experience!
       </p>
     </div>
   </div>
@@ -149,59 +158,40 @@
       <h1 id="ctf">Learn to Hack</h1>
       <hr>
       <p>
-        To help you prepare for our CTFs, we have compiled a list of resources and tools that can assist you in learning and practicing cybersecurity skills:
+        To help you prepare for our CTFs, we have compiled a list of resources and tools that can assist you in learning
+        and practicing cybersecurity skills:
       </p>
       <ul>
-        <li><a href="https://tryhackme.com/">TryHackMe</a> - Interactive cybersecurity training platform with hands-on labs.</li>
-        <li><a href="https://www.hackthebox.eu/">Hack The Box</a> - Online platform to test and advance your skills in penetration testing.</li>
-        <li><a href="https://www.overthewire.org/wargames/">OverTheWire</a> - Wargames to practice various security concepts.</li>
+        <li><a href="https://tryhackme.com/">TryHackMe</a> - Interactive cybersecurity training platform with hands-on
+          labs.</li>
+        <li><a href="https://www.hackthebox.eu/">Hack The Box</a> - Online platform to test and advance your skills in
+          penetration testing.</li>
+        <li><a href="https://www.overthewire.org/wargames/">OverTheWire</a> - Wargames to practice various security
+          concepts.</li>
         <li><a href="https://www.picoctf.org/">picoCTF</a> - Educational CTF platform for beginners.</li>
       </ul>
       <p>
-        We also recommend joining our Discord server where you can find teammates, ask questions, and share knowledge with the community.
+        We also recommend joining our Discord server where you can find teammates, ask questions, and share knowledge
+        with the community.
       </p>
       <div class="wrap">
         <div class="terminal">
           <hgroup class="head">
             <p class="title-terminal">
-              <svg
-                width="16px"
-                height="16px"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                stroke-linejoin="round"
-                stroke-linecap="round"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-              >
+              <svg width="16px" height="16px" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor" fill="none">
                 <path
-                  d="M7 15L10 12L7 9M13 15H17M7.8 21H16.2C17.8802 21 18.7202 21 19.362 20.673C19.9265 20.3854 20.3854 19.9265 20.673 19.362C21 18.7202 21 17.8802 21 16.2V7.8C21 6.11984 21 5.27976 20.673 4.63803C20.3854 4.07354 19.9265 3.6146 19.362 3.32698C18.7202 3 17.8802 3 16.2 3H7.8C6.11984 3 5.27976 3 4.63803 3.32698C4.07354 3.6146 3.6146 4.07354 3.32698 4.63803C3 5.27976 3 6.11984 3 7.8V16.2C3 17.8802 3 18.7202 3.32698 19.362C3.6146 19.9265 4.07354 20.3854 4.63803 20.673C5.27976 21 6.11984 21 7.8 21Z"
-                ></path>
+                  d="M7 15L10 12L7 9M13 15H17M7.8 21H16.2C17.8802 21 18.7202 21 19.362 20.673C19.9265 20.3854 20.3854 19.9265 20.673 19.362C21 18.7202 21 17.8802 21 16.2V7.8C21 6.11984 21 5.27976 20.673 4.63803C20.3854 4.07354 19.9265 3.6146 19.362 3.32698C18.7202 3 17.8802 3 16.2 3H7.8C6.11984 3 5.27976 3 4.63803 3.32698C4.07354 3.6146 3.6146 4.07354 3.32698 4.63803C3 5.27976 3 6.11984 3 7.8V16.2C3 17.8802 3 18.7202 3.32698 19.362C3.6146 19.9265 4.07354 20.3854 4.63803 20.673C5.27976 21 6.11984 21 7.8 21Z">
+                </path>
               </svg>
               Terminal
             </p>
 
             <button class="copy_toggle" tabindex="-1" type="button" id="copyButton">
-              <svg
-                width="16px"
-                height="16px"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                stroke-linejoin="round"
-                stroke-linecap="round"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-              >
-                <path
-                  d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"
-                ></path>
-                <path
-                  d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"
-                ></path>
+              <svg width="16px" height="16px" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor" fill="none">
+                <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"></path>
+                <path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path>
               </svg>
             </button>
             <script>
@@ -234,7 +224,8 @@
       <h1 id="ctf">Upcoming CTFs</h1>
       <hr>
       <p>
-        Stay tuned for our next CTF competition! We will announce the date and details on our Discord server and social media channels. Make sure to join us for a chance to win prizes and showcase your skills!
+        Stay tuned for our next CTF competition! We will announce the date and details on our Discord server and social
+        media channels. Make sure to join us for a chance to win prizes and showcase your skills!
       </p>
       <p>
         If you have any questions or suggestions for future CTFs, feel free to reach out to us on Discord or via email.
@@ -244,41 +235,41 @@
   </div>
 </body>
 <footer>
-    <div class="text-center pt-4 ">
-        <h3><b>Stay Connected</b></h3>
-        <p class="col-sm-8 col-lg-6" style="width: 50%; margin: 0 auto; margin-top: 2rem;">You can follow us on social
-            media
-            to stay
-            informed about
-            upcoming events or
-            opportunities.
-            Make sure to join our
-            Discord whether you are a Stout student or not!</p>
-        <div style="margin-bottom: 1rem; margin-top: 2rem;">
-            <a href="https://www.linkedin.com/company/cyberstout/" target="_blank" class="btn btn-outline-light mx-1"
-                style="display: inline-flex; align-items: center;">
-                <i class="bi bi-linkedin" style="font-size: 1.2rem;"></i>
-            </a>
-            <a href="https://github.com/UWStout-CCDC" target="_blank" class="btn btn-outline-light mx-1"
-                style="display: inline-flex; align-items: center;">
-                <i class="bi bi-github" style="font-size: 1.2rem;"></i>
-            </a>
-            <a href="https://discord.gg/WnM73rQFCY" target="_blank" class="btn btn-outline-light mx-1"
-                style="display: inline-flex; align-items: center;">
-                <i class="bi bi-discord" style="font-size: 1.2rem;"></i>
-            </a>
-        </div>
-        <p style="margin-bottom: 0.5rem; color: var(--color-text-primary);">&copy;
-            <script>document.write(new Date().getFullYear())</script> Cyber@Stout. All rights reserved.
-        </p>
-        <p style="margin: 0; margin-bottom: 0; font-size: 0.9rem;">Made with <i class="bi bi-heart"
-                style="color: var(--color-text-primary);"></i>
-            by <a href="https://github.com/NotEnoughAuth" target="_blank"
-                style="color: var(--color-text-primary);">NotEnoughAuth</a> &amp;
-            <a href="https://github.com/DiverseDark67" target="_blank"
-                style="color: var(--color-text-primary);">doshowipospf</a>
-        </p>
+  <div class="text-center pt-4 ">
+    <h3><b>Stay Connected</b></h3>
+    <p class="col-sm-8 col-lg-6" style="width: 50%; margin: 0 auto; margin-top: 2rem;">You can follow us on social
+      media
+      to stay
+      informed about
+      upcoming events or
+      opportunities.
+      Make sure to join our
+      Discord whether you are a Stout student or not!</p>
+    <div style="margin-bottom: 1rem; margin-top: 2rem;">
+      <a href="https://www.linkedin.com/company/cyberstout/" target="_blank" class="btn btn-outline-light mx-1"
+        style="display: inline-flex; align-items: center;">
+        <i class="bi bi-linkedin" style="font-size: 1.2rem;"></i>
+      </a>
+      <a href="https://github.com/UWStout-CCDC" target="_blank" class="btn btn-outline-light mx-1"
+        style="display: inline-flex; align-items: center;">
+        <i class="bi bi-github" style="font-size: 1.2rem;"></i>
+      </a>
+      <a href="https://discord.gg/WnM73rQFCY" target="_blank" class="btn btn-outline-light mx-1"
+        style="display: inline-flex; align-items: center;">
+        <i class="bi bi-discord" style="font-size: 1.2rem;"></i>
+      </a>
     </div>
+    <p style="margin-bottom: 0.5rem; color: var(--color-text-primary);">&copy;
+      <script>document.write(new Date().getFullYear())</script> Cyber@Stout. All rights reserved.
+    </p>
+    <p style="margin: 0; margin-bottom: 0; font-size: 0.9rem;">Made with <i class="bi bi-heart"
+        style="color: var(--color-text-primary);"></i>
+      by <a href="https://github.com/NotEnoughAuth" target="_blank"
+        style="color: var(--color-text-primary);">NotEnoughAuth</a> &amp;
+      <a href="https://github.com/DiverseDark67" target="_blank"
+        style="color: var(--color-text-primary);">doshowipospf</a>
+    </p>
+  </div>
 </footer>
 
 </html>

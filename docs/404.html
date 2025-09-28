@@ -21,15 +21,15 @@
     <meta name="description"
         content="Support the Cyber@Stout Collegiate Cyber Defense Competition Club by becoming a sponsor. Help fund our students and our mission to educate the community about computer security." />
     <title>Error | Cyber@Stout</title>
-    <link rel="icon" type="image/x-icon" href="branding/favicon_all/favicon.ico" sizes="32x32">
-    <link rel="shortcut icon" href="branding/favicon_all/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="branding/favicon_all/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="branding/favicon_all/apple-touch-icon.png"><!-- 180×180 -->
-    <link rel="manifest" href="branding/favicon_all/site.webmanifest">
+    <link rel="icon" type="image/x-icon" href="/branding/favicon_all/favicon.ico" sizes="32x32">
+    <link rel="shortcut icon" href="/branding/favicon_all/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/branding/favicon_all/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/branding/favicon_all/apple-touch-icon.png"><!-- 180×180 -->
+    <link rel="manifest" href="/branding/favicon_all/site.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="css/mainstyle.css">
+    <link rel="stylesheet" href="/css/mainstyle.css">
     <script>
         function toggleNavbar() {
             const navbar = document.querySelector(".navbar-collapse");
@@ -72,7 +72,7 @@
         </div>
         <div class="navbar-brand">
             <a href=".">
-                <img id="logo" src="branding/cyberstout_banner_3.png" alt="Logo">
+                <img id="logo" src="/branding/cyberstout_banner_3.png" alt="Logo">
             </a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -110,9 +110,9 @@
             const theme = document.documentElement.getAttribute('data-theme');
             const logo = document.getElementById('logo');
             if (theme === 'dark') {
-                logo.src = 'branding/cyberstout_banner_2.png';
+                logo.src = '/branding/cyberstout_banner_2.png';
             } else {
-                logo.src = 'branding/cyberstout_banner_3.png';
+                logo.src = '/branding/cyberstout_banner_3.png';
             }
         }
         updateLogo();
@@ -123,53 +123,58 @@
 </header>
 <style>
     main {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative; /* stays above canvas */
-    z-index: 1;
-    padding: 2rem;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        /* stays above canvas */
+        z-index: 1;
+        padding: 2rem;
     }
 
 
     main h1 {
-    font-size: 4rem; /* increase error size */
-    margin-bottom: 1rem;
+        font-size: 4rem;
+        /* increase error size */
+        margin-bottom: 1rem;
     }
 
     main p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
     }
 
     main a {
-    font-size: 1.25rem;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    background: var(--color-accent, #0d6efd);
-    color: white;
-    text-decoration: none;
-    transition: background 0.3s ease;
+        font-size: 1.25rem;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        background: var(--color-accent, #0d6efd);
+        color: white;
+        text-decoration: none;
+        transition: background 0.3s ease;
     }
 
     main a:hover {
-    background: #084298;
+        background: #084298;
     }
 
     #shootingStars {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* pushes behind all other content */
-    pointer-events: none; /* don’t block clicks/links */
-    background: transparent;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        /* pushes behind all other content */
+        pointer-events: none;
+        /* don’t block clicks/links */
+        background: transparent;
     }
 </style>
+
 <body>
     <canvas id="shootingStars"></canvas>
     <main>
@@ -177,7 +182,7 @@
         <p>Sorry, the page you are looking for does not exist.</p>
         <a href="index.html">Return to Home</a>
     </main>
-    <script src="js/binaryStar.js"></script>
+    <script src="/js/binaryStar.js"></script>
 </body>
 <footer>
     <div class="text-center pt-4 ">
@@ -216,4 +221,5 @@
         </p>
     </div>
 </footer>
+
 </html>
