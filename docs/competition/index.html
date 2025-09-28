@@ -19,8 +19,7 @@
         content="The University of Wisconsin Stout's Premier Collegiate Cyber Defense Club - Learn cybersecurity fundamentals, compete in national competitions, network with industry professionals, and join our thriving community of security enthusiasts and researchers." />
     <meta name="twitter:image" content="https://cyberatstout.org/assets/ccdl_banner_white.png" />
     <link rel="canonical" href="https://cyberatstout.org/index.html" />
-    <meta name="description"
-        content="Support the Cyber@Stout Collegiate Cyber Defense Competition Club by becoming a sponsor. Help fund our students and our mission to educate the community about computer security." />
+    <meta name="description" content="Home of UW-Stout's Premier Cybersecurity Club" />
     <title>Competition | Cyber@Stout</title>
     <link rel="icon" type="image/x-icon" href="../branding/favicon_all/favicon.ico" sizes="32x32">
     <link rel="shortcut icon" href="../branding/favicon_all/favicon.ico" type="image/x-icon">
@@ -78,12 +77,14 @@
                 <img id="logo" src="../branding/cyberstout_banner_3.png" alt="Logo">
             </a>
         </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleNavbar()">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="ms-auto d-flex align-items-center">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleNavbar()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
         <button id="theme-toggle"
-            style="position: absolute; right: 1.5rem; background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; top: 0; bottom: 0; height: 100%;">
+            style="position: absolute; right: 1.5rem; background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; top: 0; bottom: 0; height: 100%; display: none;">
             <i class="bi bi-moon"></i>
         </button>
     </nav>
@@ -92,8 +93,11 @@
         const root = document.documentElement;
 
         // Set the initial theme icon based on the current theme
-        const currentTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-        toggle.innerHTML = currentTheme === 'dark' ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon"></i>';
+        // const currentTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        // toggle.innerHTML = currentTheme === 'dark' ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon"></i>';
+
+        // Disable automatic theme detection and default to dark mode
+        const currentTheme = 'dark';
 
         if (root.getAttribute('data-theme') === null) {
             const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -124,17 +128,24 @@
         });
     </script>
 </header>
+
 <body>
     <div class="competition_container">
         <h1 class="competition-title">Competition</h1>
-        <p class="competition-description">The Cyber@Stout Collegiate Cyber Defense Competition (CCDC) team is a group of dedicated students who compete in national cybersecurity competitions. Our mission is to provide students with hands-on experience in defending networks and systems against cyber threats, while also fostering a strong community of cybersecurity enthusiasts.</p>
-        
+        <p class="competition-description">The Cyber@Stout Collegiate Cyber Defense Competition (CCDC) team is a group
+            of dedicated students who compete in national cybersecurity competitions. Our mission is to provide students
+            with hands-on experience in defending networks and systems against cyber threats, while also fostering a
+            strong community of cybersecurity enthusiasts.</p>
+
         <div class="competition-content">
-        <h2>What We Do</h2>
-        <p>We participate in various collegiate-level competitions, including the National Collegiate Cyber Defense Competition (CCDC) and other regional events. Our team members gain practical skills in network defense, incident response, and teamwork, preparing them for careers in cybersecurity.</p>
-        
-        <h2>Join Us</h2>
-        <p>If you're interested in joining the Cyber@Stout CCDC team, please reach out to us via our Discord server</p>
+            <h2>What We Do</h2>
+            <p>We participate in various collegiate-level competitions, including the National Collegiate Cyber Defense
+                Competition (CCDC) and other regional events. Our team members gain practical skills in network defense,
+                incident response, and teamwork, preparing them for careers in cybersecurity.</p>
+
+            <h2>Join Us</h2>
+            <p>If you're interested in joining the Cyber@Stout CCDC team, please reach out to us via our Discord server
+            </p>
         </div>
     </div>
 </body>
