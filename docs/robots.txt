@@ -1,6 +1,6 @@
 User-agent: *
 Disallow: /js/
-Disallow: /branding/
+Disallow: /assets/
 Disallow: /css/
 Allow: /
 Allow: /favicon.ico
