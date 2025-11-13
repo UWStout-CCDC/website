@@ -13,7 +13,7 @@
   --color-nav-bg: var(--color-accent);
   --color-text-primary: #001B36;
   --gap: 2rem; /* gap between logos */
-  --speed: 120; /* pixels per second (change to taste) */
+  --speed: 100; /* banner speed */
   --duration: 20s; /* fallback duration */
 }
 
@@ -267,30 +267,22 @@ footer {
   margin-bottom: 1rem;
 }
 
-/* Banner frame */
-.sponsor-banner {
-  width: min(95vw, 1200px);
-  height: 96px;
-  overflow: hidden;
-  position: relative;
-  border-radius: 12px;
-  background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
-  box-shadow: 0 6px 26px rgba(0,0,0,0.6);
-  display: flex;
-  align-items: center;
-  padding: 0.5rem 1rem;
-}
+/* Banner spans full page width */
+  .sponsor-banner {
+    width: 100vw;
+    overflow: hidden;
+    background: #00000010;
+    padding: 1rem 0;
+  }
 
-/* Track that will be translated */
-.sponsor-track {
-  display: flex;
-  gap: var(--gap);
-  align-items: center;
-  white-space: nowrap;
-  /* animation applied via JS by setting --duration */
-  animation: scroll-right linear infinite;
-  will-change: transform;
-}
+  .sponsor-track {
+    display: flex;
+    gap: var(--gap);
+    align-items: center;
+    white-space: nowrap;
+    animation: scroll-right linear infinite;
+    will-change: transform;
+  }
 
 /* clone container holds duplicate of track for seamless loop */
 .sponsor-inner {
@@ -309,10 +301,9 @@ footer {
 
 .sponsor-item img {
   display: block;
-  height: 64px;            /* logo display size */
+  height: 64px;
   max-width: 200px;
   object-fit: contain;
-  filter: grayscale(0.05) brightness(1.05); /* subtle unify */
 }
 
 /* pause on hover / focus */
