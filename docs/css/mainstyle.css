@@ -12,6 +12,9 @@
   /* Optional cyan accent */
   --color-nav-bg: var(--color-accent);
   --color-text-primary: #001B36;
+  --gap: 3rem; /* gap between logos */
+  --speed: 90; /* banner speed */
+  --duration: 20s; /* fallback duration */
 }
 
 /* Automatically apply dark mode if user's OS prefers it */
@@ -262,4 +265,66 @@ footer {
   text-align: center;
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+/* Banner spans full page width */
+  .sponsor-banner {
+    width: 100vw;
+    overflow: hidden;
+    background: #00000010;
+    padding: 1rem 0;
+  }
+
+  .sponsor-track {
+    display: flex;
+    gap: var(--gap);
+    align-items: center;
+    white-space: nowrap;
+    animation: scroll-right linear infinite;
+    will-change: transform;
+  }
+
+/* clone container holds duplicate of track for seamless loop */
+.sponsor-inner {
+  display: inline-flex;
+  gap: var(--gap);
+  align-items: center;
+}
+
+.sponsor-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  min-height: 64px;
+}
+
+.sponsor-item img {
+  display: block;
+  height: 64px;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+/* pause on hover / focus */
+.sponsor-banner:hover .sponsor-track,
+.sponsor-banner:focus-within .sponsor-track {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-right {
+  /* move from -100% of the duplicated content to 0 => content appears to move right */
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(0%); }
+}
+
+/* accessibility: hide decorative images from screen readers, unless user supplies alt */
+.sponsor-item img[alt=""] {
+  pointer-events: none;
+}
+
+/* small screens tweak */
+@media (max-width: 480px) {
+  .sponsor-banner { height: 72px; }
+  .sponsor-item img { height: 48px; }
 }
