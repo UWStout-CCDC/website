@@ -12,8 +12,8 @@
   /* Optional cyan accent */
   --color-nav-bg: var(--color-accent);
   --color-text-primary: #001B36;
-  --gap: 2rem; /* gap between logos */
-  --speed: 100; /* banner speed */
+  --gap: 3rem; /* gap between logos */
+  --speed: 90; /* banner speed */
   --duration: 20s; /* fallback duration */
 }
 
